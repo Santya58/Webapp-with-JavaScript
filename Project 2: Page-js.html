@@ -1,0 +1,46 @@
+ <script>
+    
+ document.addEventListener('DOMContentLoaded', function() {
+         var SelectOptions = document.querySelectorAll('select');
+         var instances1 = M.FormSelect.init(SelectOptions);
+         
+         
+         var datePicker = document.getElementById('start');
+         var instances = M.Datepicker.init(datePicker);
+         
+         var datePicker2 = document.getElementById('end');
+         var instances = M.Datepicker.init(datePicker2);
+         
+         var elems = document.querySelectorAll('.modal');
+         var instances = M.Modal.init(elems); 
+        });
+        
+        
+ document.getElementById("btn").addEventListener("click",doStuff);
+    
+    function doStuff(){
+    var userinfo = {};
+     
+      userinfo.name = document.getElementById("name").value;
+      userinfo.StaffID = document.getElementById("ID").value;
+      userinfo.application = document.getElementById("app").value;
+      userinfo.type = document.getElementById("type").value;
+      userinfo.StartDate = document.getElementById("start").value;
+      userinfo.EndDate = document.getElementById("end").value;
+      userinfo.Reason = document.getElementById("reason").value;
+       
+     google.script.run.userClicked(userinfo);
+         
+     document.getElementById("name").value;
+     document.getElementById("ID").value;
+     document.getElementById("app").value;
+     document.getElementById("type").value;
+     document.getElementById("start").value;
+     document.getElementById("end").value;
+     document.getElementById("reason").value;
+
+     }
+  
+ </script>
+
+
