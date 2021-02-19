@@ -1,0 +1,27 @@
+//Function if you can change the month or year value, then automatically it triggers the loop to run  
+
+function onEdit(e) {
+      
+  var range = e.range;
+  var SpreadSheet = e.source;
+  var sheetName = SpreadSheet.getActiveSheet().getName();
+      
+    var month = sheet.getRange(7,3);
+    var year = sheet.getRange(8,3);
+    
+  var inputValue = e.value;
+  
+
+  if(sheetName == 'test' && month !== "") {
+  
+  //GETS THE CORRECT VALUE
+    const Monthvalue = sheet.getRange(7,3).getValue();
+    const Yearvalue = sheet.getRange(8,3).getValue(); 
+    
+     
+    //THE LOOP BELOW WORKS PERFECTLY 
+    for(var i=12; i<= 42; i++){
+    var cell1 = sheet.getRange("B"+ i).setValue(Monthvalue + "/" + (i- 11)  + "/" + Yearvalue );  
+   }
+  }
+ }
